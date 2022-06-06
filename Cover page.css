@@ -1,0 +1,53 @@
+body{
+    background-color: #FCB898; 
+    text-align: center;
+    margin-top: 200px;
+    /*background-image: url(Cover\ photo.jpg);
+    background-size: 45% 65%; 
+    background-position: center ;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    border-radius:30px;*/
+   
+}
+
+#background-image {
+    position: center; 
+    margin-bottom: 0;
+    width: 30%;
+    /*background-attachment: fixed;*/
+    border-radius: 30px;
+    opacity: 0.3;
+}
+.overlap{
+    position: relative;
+   width: 100%; /* for IE 6 */
+}
+
+#text { 
+   position: absolute; 
+   top: 150px; 
+   left: 0; 
+   width: 100%; 
+}
+
+
+.buttons{
+    text-decoration: none;
+}
+
+overlap{
+    min-height: calc(100vh - 70px);
+    max-width: 1200px;
+    margin: auto;
+    background-color: var(--white-alpha-25);
+    border: 1px solid var(--white-alpha-40);
+    border-radius: 30px;
+    backdrop-filter: var(--backdrop-filter-blur);
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
