@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body{
+    background-color: #292C34;
+}
+
+header{
+    background: white;
+    padding: 20px;
+}  
+
+.alert{
+    background: white;
+}
+
+.alert >p {
+    top: 0;
+    left: 0;
+    background: #E2584D;
+    color: white;
+    font-size: 14px;
+    padding: 2px 10px;
+    font-family: Asap, sans-serif;
+    width: 165px;
+    border-radius: 2px;
+}
+
+header h1 {
+    color: #24272E;
+    text-align: center;
+    font-family: Asap, sans-serif;
+    display: block;
+}
+
+.board{
+    text-align: center;
+}
+
+.score-board{
+    border: 3px solid white;
+    margin: 20px auto;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 200px;
+    color: white;
+    font-size: 46px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 15px 20px;
+    position: relative; /* this is so the user/comp-label can be at the
+    top left corner of this parent instead of the general page of the web browser*/
+    display: inline-block;
+}
+
+.badge{
+    background: #E2584D;
+    color: white;
+    font-size: 14px;
+    padding: 2px 10px;
+    font-family: Asap, sans-serif; 
+}
+.player1{
+    display: inline;
+}
+.player2{
+    display: inline;
+}
+
+#player1{
+    height: 50px;
+    width:50px;
+}
+#player2{
+    height: 50px;
+    width: 50px;
+}
+#player3{
+    height: 50px;
+    width: 50px;
+}
+
+#user-label{
+    position: absolute;
+    top: 30px;
+    left: -25px;
+    display: inline-block;
+}
+
+#comp-label{
+    position: absolute;
+    top: 30px;
+    right: -30px;
+    display: inline-block;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+.container .section{
+    width: 150px;
+    margin: 20px 50px;
+    /*style for each box*/
+}
+.section .info{
+    background: rgb(10, 10, 10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    /*style for the top part of the box*/
+}
+.info h3{
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0px 10px;
+    font-family: sans-serif;
+    color: white;
+}
+.show{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background : rgb(41, 40, 40);
+    height: 100px;
+}
+/*.computer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background : rgb(41, 40, 40);
+        height: 100px;
+    }*/
+
+/*.show i{
+    font-size: 100px;
+    color: orange;
+}*/
+
+.result{
+    font-size: 40px;
+    color: white;
+}
+.result > p {
+    text-align: center;
+    font-family: Asap, sans-serif;
+    font-weight: bold;
+}
+
+
+.choices{
+     text-align: center;
+     margin-top: 50px 0;
+}  
+
+.choice{
+    display: inline-block;  /* to make the images on the same line */
+    border: 4px solid white;
+    border-radius: 50%;
+    padding: 25px;
+    background-color: #292C34;
+    margin: 60px 20px; /*0px top and bottom, 15px left and right*/
+    transition: all 0.3s ease; /*time for hover to surface*/
+}
+.choice:hover {
+    cursor: pointer;
+    background:  white;
+}
+
+.click{
+    border-radius: 50%;
+}
+
+#Rock{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+#Paper{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+#Scissors{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+#action-message{
+    text-align: center;
+    font-family: Asap, sans-serif;
+    color:white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+
+.green-glow{
+    border: 4px solid #4dcc7d;
+    box-shadow: 0 0 10px #31b43a; 
+    /*horizontal, vertical, blur, and color is the arrangement of the box-shadow element*/
+    /* a value after "blur" can be put to indicate how far you want your shadow should go */
+}
+.red-glow{
+    border: 4px solid #fc121b;
+    box-shadow: 0 0 10px #d01115; 
+}
+.gray-glow{
+    border: 4px solid #464647; /*#cccc00*/
+    box-shadow: 0 0 10px #25292b;  /*#b3b300*/
+}
+
+
+@media screen and (max-width: 450px) {
+   header{
+    padding: 2%;
+   }
+
+   .alert >p{
+    font-size: 80%;
+    padding: .2% 1%;
+   }
+
+   header h1{
+    font-size: 140%;
+   }
+
+   .score-board{
+    border: .2% solid white;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 30%;
+    font-size: 100%;
+    padding: 3% 5%;
+   }
+
+   #user-label{
+    top: 30%;
+    left: -8%;
+   }
+
+   #comp-label{
+    top: 30%;
+    right: -10%;
+   }
+
+   .badge{
+      font-size: 70%;
+      padding: 1% 2%;  
+   }
+
+   #player1 {
+    height: 10%;
+    width: 10%;
+   }
+
+   #player2 {
+    height: 15%;
+    width: 15%;
+   }
+  
+   #player3 {
+    height: 10%;
+    width: 10%;
+   }
+
+   .result >p{
+    font-size: 50%;
+   }
+
+   .choice{
+    padding: 5px;
+     border: 2px solid white;
+    margin: 10% 2%;
+   }
+
+   #Rock{
+    height: 4rem;
+    width: 4rem;
+   }
+   #Paper{
+    height: 4rem;
+    width: 4rem;
+   }
+   #Scissors{
+    height: 4rem;
+    width: 4rem;
+   }
+   
+   
+
+   #action-message{
+    font-size: 80%;
+   }
+}
+
+
+
+@media screen and (min-width: 500px) and (max-width: 1023px) {
+    header{
+     padding: 2%;
+    }
+ 
+    .alert >p{
+     font-size: 80%;
+     padding: .2% 1%;
+    }
+ 
+    header h1{
+     font-size: 140%;
+    }
+ 
+    .score-board{
+     border: .2% solid white;
+     margin-top: 10%;
+     margin-left: 5%;
+     margin-right: 5%;
+     width: 30%;
+     font-size: 120%;
+     padding: 3% 5%;
+    }
+ 
+    #user-label{
+     top: 30%;
+     left: -8%;
+    }
+ 
+    #comp-label{
+     top: 30%;
+     right: -10%;
+    }
+ 
+    .badge{
+       font-size: 70%;
+       padding: 1% 2%;  
+    }
+ 
+    #player1 {
+     height: 10%;
+     width: 10%;
+    }
+ 
+    #player2 {
+     height: 15%;
+     width: 15%;
+    }
+   
+    #player3 {
+     height: 10%;
+     width: 10%;
+    }
+ 
+    .result >p{
+     font-size: 50%;
+    }
+ 
+    .choice{
+     padding: 10px;
+      border: 2px solid white;
+     margin: 10% 2%;
+    }
+ 
+    #Rock{
+     height: 6rem;
+     width: 6rem;
+    }
+    #Paper{
+     height: 6rem;
+     width: 6rem;
+    }
+    #Scissors{
+     height: 6rem;
+     width: 6rem;
+    }
+    
+    
+ 
+    #action-message{
+     font-size: 80%;
+    }
+ }
+
+ @media screen and (min-width: 1024px){
+    .choices{
+        text-align: center;
+        margin-top: 50px 0;
+   }  
+   
+   .choice{
+       display: inline-block;  /* to make the images on the same line */
+       border: 4px solid white;
+       border-radius: 50%;
+       padding: 25px;
+       background-color: #292C34;
+       margin: 60px 20px; /*0px top and bottom, 15px left and right*/
+       transition: all 0.3s ease; /*time for hover to surface*/
+   }
+
+   .click{
+    border-radius: 50%;
+}
+
+#Rock{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+#Paper{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+#Scissors{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}   
+ }
+ 
+
